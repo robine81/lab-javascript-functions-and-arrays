@@ -191,19 +191,17 @@ const wordsCount = [
 function howManyTimes(myArr, word) {
   if (myArr.length === 0) {
     return 0
-  } else if (myArr.length === 1) {
-     return 1
-  }
+  } 
 
-  console.log(myArr.indexOf(word))
+  let counter = 0
+  myArr.forEach(function (element) {
 
-  if(myArr.indexOf(word)=== -1) {
-    return 0
-  } else if(myArr.indexOf(word)=== 1){
-    return 1
-  } else {
-    return myArr.indexOf(word)
-  }
+    if (element === word) {
+      counter += 1
+    }    
+  })
+
+  return counter
 
 }
 
